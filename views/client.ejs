@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.welcome-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+    </style>
+    <title>Strangers Chat</title>
+</head>
+<body>
+
+  <div class="welcome-container">
+    <h1>Welcome to our Chat Room!</h1>
+    <p>Please enter your name to join the conversation:</p>
+    <form id="myForm" action="/views/chat.ejs" method="POST">
+      <input type="text" id="inputData" name="data" placeholder="Enter Name.." required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+
+
+    
+      
+      <script>
+        const form = document.getElementById('myForm');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent default form submission
+      
+          const inputData = document.getElementById('inputData').value;
+          const destinationURL = `/views/chat?data=${encodeURIComponent(inputData)}`;
+        
+      
+          window.location.href = destinationURL; // Redirect to the destination page
+        });
+      </script>
+      
+</body>
+</html>

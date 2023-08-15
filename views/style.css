@@ -1,0 +1,68 @@
+.container-fluid{
+   height: 100vh;
+   background-image: url('priscilla-du-preez-K8XYGbw4Ahg-unsplash.jpg');
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #ccc;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold ;
+    font-size: 40px;
+    margin-top: 6px;
+}
+.container{
+    height:inherit;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-shadow:black black #007bff;
+    /* background-color: rgba(174, 154, 154, 0.724) !important; */
+    background-color: rgb(154 154 154 / 67%) !important
+    
+}
+.text-box{
+    width: inherit;
+    height: 80vh;
+    border: 1px solid #ccc;
+    padding: 20px;
+    /* background-color: lightgray; */
+    font-size: 19px;
+    font-weight:bold;
+    color: rgb(42, 52, 52);
+    line-height: 1.5;
+    overflow-y: scroll;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    width: inherit;
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 5px;
+    border: none;
+  }
+  
+  .input-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .activeUser{
+    margin-top: 0px;
+    margin-bottom: 0rem !important;
+    font-size: 1 rem;
+    color: rgb(37, 252, 37);
+  }
